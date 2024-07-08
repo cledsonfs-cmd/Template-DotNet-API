@@ -1,0 +1,17 @@
+- Criar a solução
+dotnet new sln -o ProdutosApi
+
+- Criar o Projeto
+dotnet new web -o ProdutosApi
+
+- Inserir Projeto na solução
+dotnet sln Template-DotNet-API/Template-DotNet-API.sln add Template-DotNet-API/Template-DotNet-API.csproj
+
+- Rodar aplicação
+dotnet run
+
+- Instalar o swagger
+dotnet add ProdutosApi.csproj package Swashbuckle.AspNetCore -v 6.2.3
+
+- Acessar o swagger
+http://localhost:5288/swagger/index.html
