@@ -1,0 +1,42 @@
+- Instalar o SDK
+sudo apt-get update 
+sudo apt-get install -y dotnet-sdk-8.0
+
+- Instalar o runtime
+sudo apt-get update 
+sudo apt-get install -y aspnetcore-runtime-8.0
+
+- Dependências
+sudo apt install zlib1g
+
+- Lista modelos 
+dotnet new list
+
+- Criação da Solution ExemploAPIREST
+dotnet new sln -n ExemploAPIREST
+
+- Criação do projeto
+dotnet new classlib -n Alturas
+
+- Adicionar o projeto a solução
+dotnet sln add Alturas/Alturas.csproj
+
+cd Alturas
+dotnet restore
+
+mv Class1.cs ConversorAlturas.cs
+
+- Compilar
+dotnet build
+
+- Novo projeto
+dotnet new webapi -n APIAlturas
+
+- Associando o novo projeto
+dotnet sln add APIAlturas/APIAlturas.csproj
+
+cd APIAlturas
+- Utilizar a biblioteca
+dotnet add reference ../Alturas/Alturas.csproj
+
+dotnet restore
