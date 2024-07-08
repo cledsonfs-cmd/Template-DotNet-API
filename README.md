@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/456px-Microsoft_.NET_logo.svg.png" width="400" alt=".Net Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/456px-Microsoft_.NET_logo.svg.png" width="200" alt=".Net Logo"></a></p>
 
 
 ## Description
@@ -15,11 +15,18 @@
 $ sudo apt-get update 
 $ sudo apt-get install -y dotnet-sdk-8.0
 ```
+
 #### Instalar o runtime
 ```bash
 $ sudo apt-get update 
 $ sudo apt-get install -y aspnetcore-runtime-8.0
 ```
+
+#### Dependências
+```bash
+$ dotnet add ProdutosApi.csproj package Swashbuckle.AspNetCore -v 6.2.3
+```
+
 ## Running the app
 
 ```bash
