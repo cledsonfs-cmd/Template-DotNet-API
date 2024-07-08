@@ -4,7 +4,7 @@
 ## Description
 
 
-[Template-DotNet-API](https://dotnet.microsoft.com/pt-br/): Template para o desenvolvimento de APIs com base no framework Laravel.
+[Template-DotNet-API](https://dotnet.microsoft.com/pt-br/): Template para o desenvolvimento de APIs com a stacks de desenvolvimento DotNet. 
 
 ## Technologies used
 - [.Net 8](https://www.php.net/)
