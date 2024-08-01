@@ -40,3 +40,7 @@ cd APIAlturas
 dotnet add reference ../Alturas/Alturas.csproj
 
 dotnet restore
+
+
+dotnet add package Swashbuckle.AspNetCore
+

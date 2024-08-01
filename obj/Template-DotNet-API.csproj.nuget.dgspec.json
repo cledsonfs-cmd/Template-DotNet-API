@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/cledson/Templates/Template-DotNet-API/Template-DotNet-API.csproj": {}
+    "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API.csproj": {}
   },
   "projects": {
-    "/home/cledson/Templates/Template-DotNet-API/Template-DotNet-API.csproj": {
+    "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cledson/Templates/Template-DotNet-API/Template-DotNet-API.csproj",
+        "projectUniqueName": "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API.csproj",
         "projectName": "Template-DotNet-API",
-        "projectPath": "/home/cledson/Templates/Template-DotNet-API/Template-DotNet-API.csproj",
+        "projectPath": "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API.csproj",
         "packagesPath": "/home/cledson/.nuget/packages/",
-        "outputPath": "/home/cledson/Templates/Template-DotNet-API/obj/",
+        "outputPath": "/home/cledson/Templates/BACK/Template-DotNet-API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/cledson/.nuget/NuGet/NuGet.Config"
@@ -40,7 +40,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
