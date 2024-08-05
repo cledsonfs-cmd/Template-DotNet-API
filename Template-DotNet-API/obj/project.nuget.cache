@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rCEYx3gX9r883npV7u1LOcatsy6/Gy8eU8OGd2KJzt4t+DFxYaP3ozR9BmgIMa5J/XTkPpV0zUgkChVkmWEw9Q==",
+  "dgSpecHash": "Kguv9ssSNATy3k/O50slRG2lT43gdA2MemJ9LKY75PY/SFd+tsGQh5mkSumNCpbcGExkBwtxVslQ1feLWMeovg==",
   "success": true,
   "projectFilePath": "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API/Template-DotNet-API.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.7/microsoft.aspnetcore.cryptography.keyderivation.8.0.7.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.dataprotection/2.2.0/microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.dataprotection.abstractions/2.2.0/microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",
+    "/home/cledson/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/8.0.7/microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.7.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.hosting.abstractions/2.2.0/microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.hosting.server.abstractions/2.2.0/microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.aspnetcore.http/2.2.0/microsoft.aspnetcore.http.2.2.0.nupkg.sha512",

@@ -3,20 +3,20 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Template_DotNet_API.Data;
 using Template_DotNet_API.Enums;
-using Template_DotNet_API.Models;
+using Template_DotNet_API.Models.DTOs;
 using Template_DotNet_API.Services;
 
 namespace Template_DotNet_API.Controllers
 {
     [ApiController]
     [Route("api")]
-    public class UsersController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly TokenService _tokenService;
 
-        public UsersController(UserManager<ApplicationUser> userManager, ApplicationDbContext context, TokenService tokenService, ILogger<UsersController> logger)
+        public AuthController(UserManager<ApplicationUser> userManager, ApplicationDbContext context, TokenService tokenService, ILogger<AuthController> logger)
         {
             _userManager = userManager;
             _context = context;
@@ -50,11 +50,22 @@ namespace Template_DotNet_API.Controllers
             }
 
             return BadRequest(ModelState);
+
+            // return Ok(new AuthResponse
+            // {
+            //     Uuid = 1,
+            //     Email = "teste@teste.com",
+            //     nome = "teste teste",
+            //     Token = "001001001",
+            //     Provedor = "",
+            //     ImageUrl = "",
+            //     Role = Role.Admin
+            // });
         }
 
 
         [HttpPost]
-        [Route("login")]        
+        [Route("login")]
         public async Task<ActionResult<AuthResponse>> Authenticate([FromBody] AuthRequest request)
         {
             if (!ModelState.IsValid)
@@ -86,9 +97,13 @@ namespace Template_DotNet_API.Controllers
 
             return Ok(new AuthResponse
             {
-                Username = userInDb.UserName,
-                Email = userInDb.Email,
-                Token = accessToken,
+                Uuid = 1,
+                Email = "teste@teste.com",
+                nome = "teste teste",
+                Token = "001001001",
+                Provedor = "",
+                ImageUrl = "",
+                Role = Role.Admin
             });
         }
 
@@ -96,21 +111,21 @@ namespace Template_DotNet_API.Controllers
         [Authorize]
         public string Logout()
         {
-          return "xxxx";
+            return "xxxx";
         }
 
         [HttpPost("refresh")]
         [Authorize]
         public string Refresh()
         {
-          return "xxxx";
+            return "xxxx";
         }
 
         [HttpGet("users")]
         [Authorize]
         public string Users()
         {
-          return "xxxx";
+            return "xxxx";
         }
-        }
+    }
 }

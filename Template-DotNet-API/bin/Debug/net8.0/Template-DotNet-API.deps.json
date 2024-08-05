@@ -10,6 +10,7 @@
         "dependencies": {
           "Asp.Versioning.Mvc": "8.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.7",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore": "8.0.7",
@@ -137,6 +138,17 @@
         }
       },
       "Microsoft.AspNetCore.DataProtection.Abstractions/2.2.0": {},
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/8.0.7": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+            "assemblyVersion": "8.0.7.0",
+            "fileVersion": "8.0.724.31402"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Hosting.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.2.0",
@@ -990,6 +1002,13 @@
       "sha512": "sha512-seANFXmp8mb5Y12m1ShiElJ3ZdOT3mBN3wA1GPhHJIvZ/BxOCPyqEOR+810OWsxEZwA5r5fDRNpG/CqiJmQnJg==",
       "path": "microsoft.aspnetcore.dataprotection.abstractions/2.2.0",
       "hashPath": "microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/8.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LuLXLLAcW5M2B6Q/9Uu8xJ63MWsplq4MaNuWwM1qupJOARZGmRjvQR8Mh9Mir+VxmRK7ANlS9hCFLFDVqZRJTQ==",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/8.0.7",
+      "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Hosting.Abstractions/2.2.0": {
       "type": "package",

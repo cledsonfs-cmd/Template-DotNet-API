@@ -2,7 +2,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Template_DotNet_API.Models;
+using Template_DotNet_API.Models.DTOs;
 
 namespace Template_DotNet_API.Services
 {

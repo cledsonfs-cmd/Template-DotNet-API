@@ -1,4 +1,4 @@
-﻿namespace Template_DotNet_API.Models
+﻿namespace Template_DotNet_API.Models.DTOs
 {
     public class AuthRequest
     {

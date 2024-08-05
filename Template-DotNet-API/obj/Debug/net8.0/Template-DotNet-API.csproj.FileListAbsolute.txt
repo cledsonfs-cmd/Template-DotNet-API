@@ -365,3 +365,6 @@ Z:/BACK/Template-DotNet-API/Template-DotNet-API/obj/Debug/net8.0/Template-DotNet
 Z:/BACK/Template-DotNet-API/Template-DotNet-API/obj/Debug/net8.0/Template-DotNet-API.genruntimeconfig.cache
 Z:/BACK/Template-DotNet-API/Template-DotNet-API/obj/Debug/net8.0/ref/Template-DotNet-API.dll
 /home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API/obj/Debug/net8.0/Template-DotNet-API.sourcelink.json
+C:/Users/User/source/repos/Template-DotNet-API/Template-DotNet-API/obj/Debug/net8.0/Template-DotNet-API.sourcelink.json
+C:/Users/User/source/repos/Template-DotNet-API/Template-DotNet-API/bin/Debug/net8.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API/bin/Debug/net8.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll

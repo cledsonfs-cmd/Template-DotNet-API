@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Template_DotNet_API.Data;
-using Template_DotNet_API.Models;
+using Template_DotNet_API.Models.DTOs;
 using Template_DotNet_API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,7 +49,8 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 // Add DB Contexts
 // Move the connection string to user secrets for a real app
-builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql("Host=localhost;Database=postgres;Username=postgres;Password=devpass"));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(connectionString));
 
 builder.Services.AddScoped<TokenService, TokenService>();
 
