@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Template-DotNet-API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "Z:\\BACK\\Template-DotNet-API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C90DE53D-6093-4AD5-8760-8C7415B92AC9}|Template-DotNet-API\\Template-DotNet-API.csproj|z:\\back\\template-dotnet-api\\template-dotnet-api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C90DE53D-6093-4AD5-8760-8C7415B92AC9}|Template-DotNet-API\\Template-DotNet-API.csproj|solutionrelative:template-dotnet-api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C90DE53D-6093-4AD5-8760-8C7415B92AC9}|Template-DotNet-API\\Template-DotNet-API.csproj|z:\\back\\template-dotnet-api\\template-dotnet-api\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C90DE53D-6093-4AD5-8760-8C7415B92AC9}|Template-DotNet-API\\Template-DotNet-API.csproj|solutionrelative:template-dotnet-api\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "Z:\\BACK\\Template-DotNet-API\\Template-DotNet-API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Template-DotNet-API\\Controllers\\UsersController.cs",
+              "ToolTip": "Z:\\BACK\\Template-DotNet-API\\Template-DotNet-API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Template-DotNet-API\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAIwGsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T14:27:24.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "Z:\\BACK\\Template-DotNet-API\\Template-DotNet-API\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Template-DotNet-API\\Models\\ApplicationUser.cs",
+              "ToolTip": "Z:\\BACK\\Template-DotNet-API\\Template-DotNet-API\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Template-DotNet-API\\Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T14:13:22.918Z",
+              "EditorCaption": ""
             }
           ]
         }
