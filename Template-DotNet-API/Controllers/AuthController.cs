@@ -41,7 +41,19 @@ namespace Template_DotNet_API.Controllers
             if (result.Succeeded)
             {
                 request.Password = "";
-                return CreatedAtAction(nameof(Register), new { email = request.Email, role = request.Role }, request);
+                CreatedAtAction(nameof(Register), new { email = request.Email, role = request.Role }, request);
+                var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.Email);
+                var accessToken = _tokenService.CreateToken(userInDb);
+                return Ok(new AuthResponse
+                {
+                  uuid = userInDb.Id,
+                  email = userInDb.Email,
+                  nome = userInDb.UserName,
+                  token = accessToken,
+                  provedor = "",
+                  imageUrl = "",
+                  role = userInDb.Role
+                });
             }
 
             foreach (var error in result.Errors)
@@ -50,17 +62,6 @@ namespace Template_DotNet_API.Controllers
             }
 
             return BadRequest(ModelState);
-
-            // return Ok(new AuthResponse
-            // {
-            //     Uuid = 1,
-            //     Email = "teste@teste.com",
-            //     nome = "teste teste",
-            //     Token = "001001001",
-            //     Provedor = "",
-            //     ImageUrl = "",
-            //     Role = Role.Admin
-            // });
         }
 
 
@@ -97,35 +98,86 @@ namespace Template_DotNet_API.Controllers
 
             return Ok(new AuthResponse
             {
-                Uuid = 1,
-                Email = "teste@teste.com",
-                nome = "teste teste",
-                Token = "001001001",
-                Provedor = "",
-                ImageUrl = "",
-                Role = Role.Admin
+                uuid = userInDb.Id,
+                email = userInDb.Email,
+                nome = userInDb.UserName,
+                token = accessToken,
+                provedor = "",
+                imageUrl = "",
+                role = userInDb.Role
             });
         }
 
-        [HttpPost("logout")]
-        [Authorize]
-        public string Logout()
+        [HttpPost("logout")]        
+        public async Task<ActionResult<AuthResponse>> Logout()
         {
-            return "xxxx";
+          Response.Headers.Remove("Authorization");
+          
+          return Ok(new MessageDTO { 
+            message = "Logout efetuado com sucesso!",
+          });
         }
 
-        [HttpPost("refresh")]
-        [Authorize]
-        public string Refresh()
+        [HttpPost("refresh")]        
+        public async Task<ActionResult<AuthResponse>> Refresh([FromBody] AuthRequest request)
         {
-            return "xxxx";
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var managedUser = await _userManager.FindByEmailAsync(request.Email!);
+            if (managedUser == null)
+            {
+                return BadRequest("Bad credentials");
+            }
+
+            var isPasswordValid = await _userManager.CheckPasswordAsync(managedUser, request.Password!);
+            if (!isPasswordValid)
+            {
+                return BadRequest("Bad credentials");
+            }
+
+            var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.Email);
+
+            if (userInDb is null)
+            {
+                return Unauthorized();
+            }
+
+            var accessToken = _tokenService.CreateToken(userInDb);
+            await _context.SaveChangesAsync();
+
+            return Ok(new AuthResponse
+            {
+                uuid = userInDb.Id,
+                email = userInDb.Email,
+                nome = userInDb.UserName,
+                token = accessToken,
+                provedor = "",
+                imageUrl = "",
+                role = userInDb.Role
+            });
         }
 
         [HttpGet("users")]
-        [Authorize]
-        public string Users()
+        public async Task<ActionResult<AuthResponse>> Users()
         {
-            return "xxxx";
+          var usuarios = _context.Users;
+          List<UsuarioDTO> usuarioDTOs = new List<UsuarioDTO>();
+          foreach(var user in usuarios){
+            var userDTO = new UsuarioDTO()
+            {
+              uuid = user.Id,
+              email = user.Email,
+              nome = user.UserName,
+              provedor = "",
+              imageUrl = "",
+              role = user.Role
+            };
+            usuarioDTOs.Add(userDTO);
+          }
+          return Ok(usuarioDTOs);
         }
     }
 }
