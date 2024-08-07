@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Template_DotNet_API.Data;
@@ -8,6 +9,7 @@ using Template_DotNet_API.Services;
 
 namespace Template_DotNet_API.Controllers
 {
+    [EnableCors("CorsApi")]
     [ApiController]
     [Route("api")]
     public class AuthController : ControllerBase

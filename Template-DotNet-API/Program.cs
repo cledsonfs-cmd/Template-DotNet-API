@@ -15,6 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsApi",
+        builder => builder.WithOrigins("http://localhost:4200", 
+        "http://localhost:3000",
+        "http://mywebsite.com")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 builder.Services.AddSwaggerGen(option =>
 {
     option.SwaggerDoc("v1", new OpenApiInfo { Title = "Test API", Version = "v1" });
@@ -107,6 +117,8 @@ builder.Services.AddAuthentication(options => {
 // Build the app
 var app = builder.Build();
 
+app.UseRouting();
+app.UseCors("CorsApi");
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
