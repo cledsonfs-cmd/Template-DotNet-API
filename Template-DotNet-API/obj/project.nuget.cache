@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kguv9ssSNATy3k/O50slRG2lT43gdA2MemJ9LKY75PY/SFd+tsGQh5mkSumNCpbcGExkBwtxVslQ1feLWMeovg==",
+  "dgSpecHash": "TsHX2mbIA9gvAU+KbctDN3yEMAcZBfDpIhMyyjK4oozpyYCpiUTnPDaUU+oq+DZgyZMpNOCOijMBPv3fJhUGwA==",
   "success": true,
   "projectFilePath": "/home/cledson/Templates/BACK/Template-DotNet-API/Template-DotNet-API/Template-DotNet-API.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "/home/cledson/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/cledson/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.20.1/microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512",
     "/home/cledson/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/home/cledson/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
@@ -94,7 +95,10 @@
     "/home/cledson/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/home/cledson/.nuget/packages/system.text.json/8.0.4/system.text.json.8.0.4.nupkg.sha512",
-    "/home/cledson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
+    "/home/cledson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
+    "/home/cledson/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.7/microsoft.netcore.app.runtime.linux-x64.8.0.7.nupkg.sha512",
+    "/home/cledson/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.7/microsoft.aspnetcore.app.runtime.linux-x64.8.0.7.nupkg.sha512",
+    "/home/cledson/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.7/microsoft.netcore.app.host.linux-x64.8.0.7.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,32 @@
+version: "3.8"
+
+networks:
+  template-net:
+    driver: bridge
+    name: template-net
+  db-postgresql-net:
+    name: db-postgresql-net
+    driver: bridge
+
+services:
+  nest-api:
+    container_name: "dotnet-api"
+    image: templates.local:8080/dotnet-api
+    networks:
+      - template-net
+      - db-postgresql-net
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - "redistemplate"
+
+  redistemplate:
+    image: redis:alpine
+    ports:
+      - "16379:6379"
+    networks:
+      - template-net
